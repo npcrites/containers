@@ -69,7 +69,7 @@ class Fib:
 
     def __repr__(self):
         if self.n is None:
-            return f'Fib()'
+            return 'Fib()'
         else:
             return f'Fib({self.n})'
 
