@@ -78,8 +78,7 @@ class BinaryTree():
         elif traversal_type == 'postorder':
             return self.postorder_print(self.root, '')
         else:
-            raise ValueError('Traversal type ' +
-                             str(traversal_type) + ' is not supported.')
+            raise ValueError('Traversal type ' + str(traversal_type) + ' is not supported.')
 
     def preorder_print(self, start, traversal):
         '''
@@ -139,8 +138,7 @@ class BinaryTree():
         elif traversal_type == 'postorder':
             return self.postorder(self.root, '')
         else:
-            raise ValueError('Traversal type ' + str(traversal_type) +
-                             ' is not supported.')
+            raise ValueError('Traversal type ' + str(traversal_type) + ' is not supported.')
 
     def preorder(self, start, traversal):
         '''
@@ -148,9 +146,7 @@ class BinaryTree():
         Implement this function by modifying the _print functions above.
         '''
         if start is not None:
-            return ([start.value]
-                    + self.preorder(start.left, '')
-                    + self.preorder(start.right, ''))
+            return ([start.value] + self.preorder(start.left, '') + self.preorder(start.right, ''))
         else:
             return []
 
@@ -160,9 +156,7 @@ class BinaryTree():
         Implement this function by modifying the _print functions above.
         '''
         if start is not None:
-            return (self.inorder(start.left, '')
-                    + [start.value]
-                    + self.inorder(start.right, ''))
+            return (self.inorder(start.left, '') + [start.value] + self.inorder(start.right, ''))
         else:
             return []
 
@@ -172,9 +166,7 @@ class BinaryTree():
         Implement this function by modifying the _print functions above.
         '''
         if start is not None:
-            return (self.postorder(start.left, '')
-                    + self.postorder(start.right, '')
-                    + [start.value])
+            return (self.postorder(start.left, '') + self.postorder(start.right, '') + [start.value])
         else:
             return []
 
