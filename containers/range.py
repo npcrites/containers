@@ -58,4 +58,4 @@ def range(a, b=None, c=None):
         while i > stop:
             yield i
             i += step
-        return 
+        return
