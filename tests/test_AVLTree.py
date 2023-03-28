@@ -52,6 +52,9 @@ def test__AVLTree__left_rotate0():
     rotated = AVLTree()
     rotated.root = AVLTree._left_rotate(avltree0.root)
     assert rotated.is_bst_satisfied()
+    print("inside test")
+    print(rotated.to_list('inorder'))
+    print(avltree0.to_list('inorder'))
     assert rotated.to_list('inorder') == avltree0.to_list('inorder')
 
 def test__AVLTree__left_rotate1():
