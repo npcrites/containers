@@ -275,6 +275,5 @@ class BSTIter:
         if self.i >= len(self.xs):
             raise StopIteration
         else:
-            result = self.xs[self.i]
             self.i += 1
             return
