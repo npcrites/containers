@@ -70,32 +70,32 @@ class Heap(BinaryTree):
         ret = True
         if node is None:
             return True
-        leftHeap = Heap._is_heap_satisfied(node.left)
-        rightHeap = Heap._is_heap_satisfied(node.right)
-        if not leftHeap or not rightHeap:
+        left_heap = Heap._is_heap_satisfied(node.left)
+        right_heap = Heap._is_heap_satisfied(node.right)
+        if not left_heap or not right_heap:
             ret = False
         if node.left is not None and node.left.value < node.value:
             ret = False
         if node.right is not None and node.right.value < node.value:
             ret = False
         # ensure left to right property
-        lastLevel = [node]
+        last_level = [node]
         leaf = False
         while not leaf:
-            nextLevel = []
-            for n in lastLevel:
+            next_level = []
+            for n in last_level:
                 if n.left is not None:
-                    nextLevel.append(n.left)
+                    next_level.append(n.left)
                 if n.right is not None:
-                    nextLevel.append(n.right)
+                    next_level.append(n.right)
                 if n.left is None or n.right is None:
                     leaf = True
-            if len(nextLevel) == 0 and not leaf:
+            if len(next_level) == 0 and not leaf:
                 ret = False
-            for i in range(len(nextLevel) - 1):
-                if nextLevel[i+1].left is None and nextLevel[i+1].right is not None:
+            for i in range(len(next_level) - 1):
+                if next_level[i + 1].left is None and next_level[i + 1].right is not None:
                     ret = False
-            lastLevel = nextLevel
+            last_level = next_level
         return ret
 
     def insert(self, value):
@@ -121,7 +121,7 @@ class Heap(BinaryTree):
             self.root = Node(value)
             return self.root
         # find insert position
-        binary_str = bin(self.size+1)[3:]
+        binary_str = bin(self.size + 1)[3:]
         # Convert heap size to binary and ignore most significant bit
         curr_node = self.root
         # Start at the root node
@@ -157,7 +157,6 @@ class Heap(BinaryTree):
             curr_node.right = Node(value)
             curr_node.right.parent = curr_node
             node = curr_node.right
-        
         # bubble up
         while node is not None and node.parent is not None and node != node.parent and node.value < node.parent.value:
             node.value, node.parent.value = node.parent.value, node.value
