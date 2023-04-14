@@ -2,21 +2,18 @@ def range(a, b=None, c=None):
     '''
     This function should behave exactly like the built-in range function.
     For example:
-
     >>> list(range(5))
     [0, 1, 2, 3, 4]
     >>> list(range(1, 5))
     [1, 2, 3, 4]
     >>> list(range(1, 5, 2))
     [1, 3]
-
     HINT:
     If you can figure out how to use the built-in
     range function (without modifying the test cases!),
     then feel free to do so.
     That's fairly difficult to do, however, and it's much easier to
     just implement this function normally using the yield syntax.
-
     NOTE:
     For efficiency reasons, Python's built-in range object
     is written in the C programming language rather than natively in python.
@@ -62,3 +59,4 @@ def range(a, b=None, c=None):
             yield i
             i += step
         return i
+        return

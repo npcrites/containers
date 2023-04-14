@@ -115,9 +115,6 @@ class BinaryTree():
         This function is similar to the print_tree function,
         but instead of printing the tree,
         it returns the contents of the tree as a list.
-
-        A general programming principle is that a function
-        should return its results
         rather than print them whenever possible.
         If a function returns its results,
         we can always print the returned results if we
@@ -127,7 +124,6 @@ class BinaryTree():
         Many of the test cases for more complicated tree
         functions rely on this to_list function,
         so it is import to implement it correctly.
-
         FIXME:
         Implement this function by modifying the _print functions above.
         '''
@@ -182,7 +178,6 @@ class BinaryTree():
         '''
         FIXME:
         Implement this function.
-
         HINT:
         The pseudocode is:
         add 1 for the current node;
@@ -211,10 +206,8 @@ class BinaryTree():
         Returns the height of the tree.
         Recall that the height is the maximum length from
         the root to a leaf node.
-
         FIXME:
         Implement this function.
-
         HINT:
         See how the __len__ method calls its helper staticmethod.
         '''
@@ -225,7 +218,6 @@ class BinaryTree():
         '''
         FIXME:
         Implement this function.
-
         HINT:
         The pseudocode is:
         if a left child exists, calculate the _height of the left child;

@@ -36,7 +36,6 @@ class BST(BinaryTree):
         be used to recreate a valid instance of the class.
         Thus, if you create a variable using the command BST([1,2,3])
         it's __repr__ will return "BST([1,2,3])"
-
         For the BST, type(self).__name__ will be the string "BST",
         but for the AVLTree, this expression will be "AVLTree".
         Using this expression ensures that all subclasses of BST will have
@@ -94,10 +93,8 @@ class BST(BinaryTree):
     def insert(self, value):
         '''
         Inserts value into the BST.
-
         FIXME:
         Implement this function.
-
         HINT:
         Create a staticmethod helper function following
         the pattern of _is_bst_satisfied.
@@ -120,10 +117,8 @@ class BST(BinaryTree):
     def insert_list(self, xs):
         '''
         Given a list xs, insert each element of xs into self.
-
         FIXME:
         Implement this function.
-
         HINT:
         Repeatedly call the insert method.
         You cannot get this method to work correctly
@@ -141,7 +136,6 @@ class BST(BinaryTree):
     def find(self, value):
         '''
         Returns whether value is contained in the BST.
-
         FIXME:
         Implement this function.
         '''
@@ -186,10 +180,8 @@ class BST(BinaryTree):
     def find_largest(self):
         '''
         Returns the largest value in the tree.
-
         FIXME:
         Implement this function.
-
         HINT:
         Follow the pattern of the _find_smallest function.
         '''
@@ -210,10 +202,8 @@ class BST(BinaryTree):
         '''
         Removes value from the BST.
         If value is not in the BST, it does nothing.
-
         FIXME:
         Implement this function.
-
         HINT:
         You should have everything else working
         before you implement this function.
@@ -266,10 +256,8 @@ class BST(BinaryTree):
     def remove_list(self, xs):
         '''
         Given a list xs, remove each element of xs from self.
-
         FIXME:
         Implement this function.
-
         HINT:
         See the insert_list function.
         '''
@@ -292,3 +280,5 @@ class BSTIter:
             result = self.xs[self.i]
             self.i += 1
             return result
+            self.i += 1
+            return
