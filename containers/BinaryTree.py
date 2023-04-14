@@ -20,6 +20,7 @@ class Node():
         self.value = value
         self.left = left    # NOTE: left should always be a Node
         self.right = right  # NOTE: right should always be a Node
+        self.parent = None
 
     def __str__(self):
         ret = '('
